@@ -1,0 +1,8 @@
+Roles and Permissions
+https://github.com/kodeine/laravel-acl
+
+HTML and Form
+https://laravelcollective.com/docs/5.2/html
+
+General Packages
+https://github.com/chiraggude/awesome-laravel#essentials
