@@ -37,18 +37,28 @@ class adminUsersController extends Controller
     }
     
     public function markApprove($id){
+        //get the user and mark it as approved
         $user = User::withAnyStatus()->find($id);
         $user->markApproved();
         $user->save();
         
+        //flash notification
+        flash('The user ' . $user->first_name . ' ' . $user->last_name . 'has been aproved')->success();
+        
+        //redirect to users home page
         return redirect()->route('admin.users.index');
     }
     
     public function markRejected($id){
+        //get user and mark it as rejected
         $user = User::withAnyStatus()->find($id);
         $user->markRejected();
         $user->save();
         
+        //Flash Notification
+        
+        
+        //redirect to users home page
         return redirect()->route('admin.users.index');
     }
 }

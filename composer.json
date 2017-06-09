@@ -9,6 +9,7 @@
         "doctrine/dbal": "^2.5",
         "hootlex/laravel-moderation": "^1.0",
         "kodeine/laravel-acl": "~1.0@dev",
+        "laracasts/flash": "^3.0",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.2.0"

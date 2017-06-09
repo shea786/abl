@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => '/admin'], function () {
+Route::group(['prefix' => '/admin'],    function () {
     Route::group(['prefix' => '/users'], function () {
         Route::post('/approve/{id}','admin\adminUsersController@markApprove')->name('admin.users.markApprove');
         Route::post('/rejecte/{id}','admin\adminUsersController@markRejected')->name('admin.users.markReject');
@@ -31,6 +31,7 @@ Route::group(['prefix' => '/admin'], function () {
             'middleware' => ['auth', 'acl'],
             'is' => 'administrator'
         ]);
+        
     });
     
     Route::group(['prefix' => '/roles'], function () {

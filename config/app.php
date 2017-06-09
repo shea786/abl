@@ -181,6 +181,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Kodeine\Acl\AclServiceProvider::class,
         Hootlex\Moderation\ModerationServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
     ],
 
