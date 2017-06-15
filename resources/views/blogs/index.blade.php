@@ -11,19 +11,21 @@ Blog
             <div class="col-md-8">
                 <!-- First Blog Post -->
                 @foreach ($blogs as $blog)
-                    <h2>
-                        <a href="{{ route('blog.show',$blog->slug) }}">{{ $blog->title }}</a>
-                    </h2>
-                    <p class="lead">
-                        by {{ $blog->callusers->first_name }} {{ $blog->callusers->last_name }}
-                    </p>
-                    <p><span class="glyphicon glyphicon-time"></span> Posted on {{ $blog->created_at }}</p>
-                    <hr>
-                    <p>{!! $blog->content !!}</p>
-                    <br>
-                    <a class="btn btn-primary" href="{{ route('blog.show',$blog->slug) }}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-    
-                    <hr>
+                    <div class="well">
+                        <h2>
+                            <a href="{{ route('blog.show',$blog->slug) }}">{{ $blog->title }}</a>
+                        </h2>
+                        <p class="lead">
+                            by {{ $blog->callusers->first_name }} {{ $blog->callusers->last_name }}
+                        </p>
+                        <p><span class="glyphicon glyphicon-time"></span> Posted on {{ $blog->created_at }}</p>
+                        <hr>
+                        <p>{!! $blog->content !!}</p>
+                        <br>
+                        <a class="btn btn-primary" href="{{ route('blog.show',$blog->slug) }}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+        
+                        <hr>
+                    </div>
                 @endforeach
                 <!-- END First Blog Post END -->
                 
