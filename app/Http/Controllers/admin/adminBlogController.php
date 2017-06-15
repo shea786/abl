@@ -122,7 +122,7 @@ class adminBlogController extends Controller
     }
     
     public function markApprove($id){
-        $blog = Blog::find($id);
+        $blog = Blog::withAnyStatus()->find($id);
         $blog->markApproved();
         $blog->save();
         
