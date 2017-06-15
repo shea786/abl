@@ -14,6 +14,11 @@ class Blog extends Model
         return $this->hasOne('App\User','id','user_id');
     }
     
+    public function callComments()
+    {
+        return $this->hasMany('App\Comment','blog_id','id');
+    }
+    
     public function callCategories()
     {
         return $this->belongsToMany('App\Category',"blog_categories");

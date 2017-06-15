@@ -19,6 +19,8 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index')->name('home.index');
 
 Route::group(['prefix' => '/blog'],function(){
+    Route::post('/{slug}','BlogController@addComment')->name('blog.add.comment');
+    Route::get('/{slug}','BlogController@show')->name('blog.show');
     Route::get('/','BlogController@index')->name('blog.index');#
 });
 

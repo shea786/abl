@@ -1,5 +1,14 @@
 @extends('layouts.app')
 
+@section('HTMLTitle')
+Create New Blog | Blogs | Admin Panel
+@endsection
+
+@section('HTMLScripts')
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=ta3z78kpximxjbabkk7xlncz7h0ob04gxn5d796dfc6mr2sl"></script>
+<script>tinymce.init({ selector:'textarea' });</script>
+@endsection
+
 @section('content')
 <div class="container-fluid">
     <div class="row">

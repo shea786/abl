@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('HTMLTitle')
+Blogs | Admin Panel
+@endsection
+
 @section('content')
 <div class="container-fluid">
     <div class="row">

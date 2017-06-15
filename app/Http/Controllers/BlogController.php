@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Blog;
 use App\Category;
+use App\Comment;
+use Auth;
 
 class BlogController extends Controller
 {
@@ -15,7 +17,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::orderBy("created_at","desc")->limit(5)->get();
+        $blogs = Blog::orderBy("created_at","desc")->paginate(2);
         $categories = Category::get();
         return view('blogs.index')->withBlogs($blogs)->withCategories($categories);
     }
@@ -47,9 +49,11 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $blog = Blog::where('slug','=',$slug)->first();
+        $categories = Category::get();
+        return view('blogs.show')->withBlog($blog)->withCategories($categories);
     }
 
     /**
@@ -84,5 +88,18 @@ class BlogController extends Controller
     public function destroy($id)
     {
         //
+    }
+    
+    public function addComment(Request $request,$slug){
+        $blog = Blog::where('slug','=',$slug)->first();
+        $comment = new Comment;
+        $comment->user_id = Auth::user()->id;
+        $comment->blog_id = $blog->id;
+        $comment->comment = $request->comment;
+        $comment->save();
+        
+        flash('The comment was successfully added')->success();
+        
+        return redirect()->route('blog.show',$blog->slug);
     }
 }
