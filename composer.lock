@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cfd87c1bd492358220cdc40c6a2a52a6",
+    "content-hash": "ca0aef3133dc1a17b050ad6d8095b5fe",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -690,12 +690,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kodeine/laravel-acl.git",
-                "reference": "c998a1b53f287fb1c74fde9d19023ec588e00c6c"
+                "reference": "82f872ad86d714a066d8f8fb510ef75a17f8ec7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kodeine/laravel-acl/zipball/c998a1b53f287fb1c74fde9d19023ec588e00c6c",
-                "reference": "c998a1b53f287fb1c74fde9d19023ec588e00c6c",
+                "url": "https://api.github.com/repos/kodeine/laravel-acl/zipball/82f872ad86d714a066d8f8fb510ef75a17f8ec7f",
+                "reference": "82f872ad86d714a066d8f8fb510ef75a17f8ec7f",
                 "shasum": ""
             },
             "require": {
@@ -734,7 +734,7 @@
                 "roles",
                 "security"
             ],
-            "time": "2017-01-18T20:22:33+00:00"
+            "time": "2017-06-12T20:14:52+00:00"
         },
         {
             "name": "laracasts/flash",
@@ -782,16 +782,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.25",
+            "version": "v5.4.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "6bcc9b1f542b3deed16d51f6aa1fe318ab407c2a"
+                "reference": "a7ebbfab64111e24f8e584db64e2be9279ded357"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/6bcc9b1f542b3deed16d51f6aa1fe318ab407c2a",
-                "reference": "6bcc9b1f542b3deed16d51f6aa1fe318ab407c2a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/a7ebbfab64111e24f8e584db64e2be9279ded357",
+                "reference": "a7ebbfab64111e24f8e584db64e2be9279ded357",
                 "shasum": ""
             },
             "require": {
@@ -907,7 +907,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-06-07T13:35:12+00:00"
+            "time": "2017-06-13T18:58:49+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1334,6 +1334,58 @@
                 "php"
             ],
             "time": "2017-03-05T18:23:57+00:00"
+        },
+        {
+            "name": "orangehill/iseed",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orangehill/iseed.git",
+                "reference": "40578a04668e9581045d43db217ff5f912978d2d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orangehill/iseed/zipball/40578a04668e9581045d43db217ff5f912978d2d",
+                "reference": "40578a04668e9581045d43db217ff5f912978d2d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.3.8",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "illuminate/filesystem": "5.x",
+                "laravel/framework": "^5.3.8",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Orangehill\\Iseed": "src/"
+                },
+                "classmap": [
+                    "src/Orangehill/Iseed/Exceptions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Tihomir Opacic",
+                    "email": "tihomir.opacic@orangehilldev.com"
+                }
+            ],
+            "description": "Generate a new Laravel database seed file based on data from the existing database table.",
+            "keywords": [
+                "artisan",
+                "generators",
+                "laravel",
+                "seed"
+            ],
+            "time": "2017-05-09T09:29:28+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -3961,7 +4013,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "kodeine/laravel-acl": 20
+        "kodeine/laravel-acl": 20,
+        "orangehill/iseed": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

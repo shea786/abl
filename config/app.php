@@ -182,6 +182,7 @@ return [
         Kodeine\Acl\AclServiceProvider::class,
         Hootlex\Moderation\ModerationServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
+        Orangehill\Iseed\IseedServiceProvider::class,
 
     ],
 

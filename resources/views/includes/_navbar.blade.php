@@ -40,7 +40,7 @@
             <li><a href="{{ route('admin.roles.index') }}">Roles</a></li>
             <li role="separator" class="divider"></li>
             <li>
-                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                <a href="{{ route('logout') }}" id="lo_btn" >Logout</a>
             </li>
          </ul>
         </li>
