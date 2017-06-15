@@ -6,6 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Blog' => $baseDir . '/app/Blog.php',
+    'App\\BlogCategory' => $baseDir . '/app/BlogCategory.php',
+    'App\\Category' => $baseDir . '/app/Category.php',
+    'App\\Comment' => $baseDir . '/app/Comment.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -14,6 +18,8 @@ return array(
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'App\\Http\\Controllers\\admin\\adminBlogController' => $baseDir . '/app/Http/Controllers/admin/adminBlogController.php',
+    'App\\Http\\Controllers\\admin\\adminCategoryController' => $baseDir . '/app/Http/Controllers/admin/adminCategoryController.php',
     'App\\Http\\Controllers\\admin\\adminRolesController' => $baseDir . '/app/Http/Controllers/admin/adminRolesController.php',
     'App\\Http\\Controllers\\admin\\adminUsersController' => $baseDir . '/app/Http/Controllers/admin/adminUsersController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
@@ -21,6 +27,7 @@ return array(
     'App\\Http\\Middleware\\RedirectIfAuthenticated' => $baseDir . '/app/Http/Middleware/RedirectIfAuthenticated.php',
     'App\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Notifications\\UserEdited' => $baseDir . '/app/Notifications/UserEdited.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
@@ -38,6 +45,10 @@ return array(
     'Collective\\Html\\HtmlBuilder' => $vendorDir . '/laravelcollective/html/src/HtmlBuilder.php',
     'Collective\\Html\\HtmlFacade' => $vendorDir . '/laravelcollective/html/src/HtmlFacade.php',
     'Collective\\Html\\HtmlServiceProvider' => $vendorDir . '/laravelcollective/html/src/HtmlServiceProvider.php',
+    'CreateBlogCategoriesTable' => $baseDir . '/database/migrations/2017_06_12_183346_create_blog_categories_table.php',
+    'CreateBlogsTable' => $baseDir . '/database/migrations/2017_06_11_220431_create_blogs_table.php',
+    'CreateCategoriesTable' => $baseDir . '/database/migrations/2017_06_11_220452_create_categories_table.php',
+    'CreateCommentsTable' => $baseDir . '/database/migrations/2017_06_11_220446_create_comments_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePermissionRoleTable' => $baseDir . '/database/migrations/2015_02_07_172657_create_permission_role_table.php',
     'CreatePermissionUserTable' => $baseDir . '/database/migrations/2015_02_17_152439_create_permission_user_table.php',

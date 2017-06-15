@@ -18,6 +18,7 @@
                             <th>Status</th>
                             <th></th>
                             <th></th>
+                            <th></th>
                         </tr>
                         @foreach($users as $user)
                             <tr>
@@ -38,6 +39,9 @@
                                         {{ csrf_field() }}
                                         <input type="submit" name='submit' class="btn btn-danger" value="Reject">
                                     </form>
+                                </td>
+                                <td>
+                                    <a href="{{ route('admin.users.edit',$user->id) }}" class="btn btn-primary">Edit</a>
                                 </td>
                             </tr>
                         @endforeach

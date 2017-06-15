@@ -1,0 +1,36 @@
+//blogs database mapping
+
+blogs
+    id
+    user_id
+    category_id
+    title
+    content
+    status
+    moderated_by
+    moderated_at
+    timestamp
+
+
+categories
+    id
+    user_id
+    title
+    status
+    moderated_at
+    moderated_by
+    timestamp
+    
+comments
+    id
+    user_id
+    blog_id
+    comment
+    status
+    moderated_at
+    moderated_by
+    timestamp
+
+
+
+

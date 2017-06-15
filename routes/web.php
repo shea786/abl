@@ -10,28 +10,28 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', function () {
+    return view('layouts.app');
+})->name('default');
 
-Route::group(['prefix' => '/admin'],    function () {
-    Route::group(['prefix' => '/users'], function () {
-        Route::post('/approve/{id}','admin\adminUsersController@markApprove')->name('admin.users.markApprove');
+Route::get('/home', 'HomeController@index')->name('home.index');
+
+Route::group(['prefix' => '/blog'],function(){
+    Route::get('/','BlogController@index')->name('blog.index');#
+});
+
+Route::group(['prefix' => '/admin',
+    'middleware' => ['auth','acl'],
+    'is' => 'administrator'
+],function () {
+    Route::group(['prefix' => '/users'],function () {
         Route::post('/rejecte/{id}','admin\adminUsersController@markRejected')->name('admin.users.markReject');
-        Route::get('/',[
-            'uses' => 'admin\adminUsersController@index',
-            'as' => 'admin.users.index',
-            'middleware' => ['auth', 'acl'],
-            'is' => 'administrator'
-        ]);
-        
+        Route::post('/approve/{id}','admin\adminUsersController@markApprove')->name('admin.users.markApprove');
+        Route::post('/edit/{id}','admin\adminUsersController@update')->name('admin.users.update');
+        Route::get('/edit/{id}','admin\adminUsersController@edit')->name('admin.users.edit');
+        Route::get('/','admin\adminUsersController@index')->name('admin.users.index');
     });
     
     Route::group(['prefix' => '/roles'], function () {
@@ -41,5 +41,21 @@ Route::group(['prefix' => '/admin'],    function () {
         Route::get('/{slug}/add/user','admin\adminRolesController@addUser')->name('admin.roles.addUser');
         Route::post('/{slug}/add/user','admin\adminRolesController@addUserStore')->name('admin.roles.addUserStore');
         Route::get('/','admin\adminRolesController@index')->name('admin.roles.index');
+    });
+    
+    Route::group(['prefix' => '/blogs'],function () {
+        Route::post('/edit/{id}','admin\adminBlogController@update')->name('admin.blogs.update');
+        Route::get('/edit/{id}','admin\adminBlogController@edit')->name('admin.blogs.edit');
+        Route::post('/create','admin\adminBlogController@store')->name('admin.blogs.store');
+        Route::get('/create','admin\adminBlogController@create')->name('admin.blogs.create');
+        Route::get('/','admin\adminBlogController@index')->name('admin.blogs.index');
+    });
+    
+    Route::group(['prefix' => '/category'],function () {
+        Route::post('/edit/{id}','admin\adminCategoryController@update')->name('admin.categories.update');
+        Route::get('/edit/{id}','admin\adminCategoryController@edit')->name('admin.categories.edit');
+        Route::post('/create','admin\adminCategoryController@store')->name('admin.categories.store');
+        Route::get('/create','admin\adminCategoryController@create')->name('admin.categories.create');
+        Route::get('/','admin\adminCategoryController@index')->name('admin.categories.index');
     });
 });

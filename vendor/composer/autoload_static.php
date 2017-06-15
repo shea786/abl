@@ -13,10 +13,10 @@ class ComposerStaticInitf55b1fa9d392131146466dfd58140d19
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
-        'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
-        '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
         'e23faeee409e941dc9b4c80386209c39' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/functions.php',
+        'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
+        '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -329,6 +329,10 @@ class ComposerStaticInitf55b1fa9d392131146466dfd58140d19
     );
 
     public static $classMap = array (
+        'App\\Blog' => __DIR__ . '/../..' . '/app/Blog.php',
+        'App\\BlogCategory' => __DIR__ . '/../..' . '/app/BlogCategory.php',
+        'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
+        'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -337,6 +341,8 @@ class ComposerStaticInitf55b1fa9d392131146466dfd58140d19
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\admin\\adminBlogController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/adminBlogController.php',
+        'App\\Http\\Controllers\\admin\\adminCategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/adminCategoryController.php',
         'App\\Http\\Controllers\\admin\\adminRolesController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/adminRolesController.php',
         'App\\Http\\Controllers\\admin\\adminUsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/adminUsersController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -344,6 +350,7 @@ class ComposerStaticInitf55b1fa9d392131146466dfd58140d19
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Notifications\\UserEdited' => __DIR__ . '/../..' . '/app/Notifications/UserEdited.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -361,6 +368,10 @@ class ComposerStaticInitf55b1fa9d392131146466dfd58140d19
         'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
         'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
         'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
+        'CreateBlogCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_12_183346_create_blog_categories_table.php',
+        'CreateBlogsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_11_220431_create_blogs_table.php',
+        'CreateCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_11_220452_create_categories_table.php',
+        'CreateCommentsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_11_220446_create_comments_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreatePermissionRoleTable' => __DIR__ . '/../..' . '/database/migrations/2015_02_07_172657_create_permission_role_table.php',
         'CreatePermissionUserTable' => __DIR__ . '/../..' . '/database/migrations/2015_02_17_152439_create_permission_user_table.php',
