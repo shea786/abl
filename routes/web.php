@@ -46,6 +46,7 @@ Route::group(['prefix' => '/admin',
     });
     
     Route::group(['prefix' => '/blogs'],function () {
+        Route::get('/approve/{id}','admin\adminBlogController@markApprove')->name('admin.blogs.mark.approve');
         Route::post('/edit/{id}','admin\adminBlogController@update')->name('admin.blogs.update');
         Route::get('/edit/{id}','admin\adminBlogController@edit')->name('admin.blogs.edit');
         Route::post('/create','admin\adminBlogController@store')->name('admin.blogs.store');

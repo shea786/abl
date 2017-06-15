@@ -23,7 +23,7 @@ Blogs | Admin Panel
                             <th>Blog Status</th>
                             <th>Moderated By</th>
                             <th>Moderated At</th>
-                            <th colspan="2">Options</th>
+                            <th colspan="4">Options</th>
                         </tr>
                         @foreach($blogs as $blog)
                             <tr>
@@ -41,6 +41,7 @@ Blogs | Admin Panel
                                 <td>{{ $blog->moderated_at }}</td>
                                 <td><a href="{{route('admin.blogs.edit',$blog->id)}}">Modify Article</a></td>
                                 <td>Delete</td>
+                                <th><a class="btn btn-success" href="{{ route('admin.blogs.mark.approve',$blog->id) }}">Approve</a></th>
                           </tr>
                         @endforeach
                     </table>

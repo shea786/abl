@@ -120,4 +120,15 @@ class adminBlogController extends Controller
     {
         //
     }
+    
+    public function markApprove($id){
+        $blog = Blog::find($id);
+        $blog->markApproved();
+        $blog->save();
+        
+        //flash notification
+        
+        //redirect
+        return redirect()->route('admin.blogs.index');
+    }
 }
