@@ -19,7 +19,8 @@ class BlogController extends Controller
     {
         $blogs = Blog::orderBy("created_at","desc")->paginate(2);
         $categories = Category::get();
-        return view('blogs.index')->withBlogs($blogs)->withCategories($categories);
+        $latestblogs = Blog::orderBy('created_at','desc')->limit(3)->get();
+        return view('blogs.index')->withBlogs($blogs)->withCategories($categories)->withLatestblogs($latestblogs);
     }
 
     /**

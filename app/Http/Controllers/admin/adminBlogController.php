@@ -127,7 +127,18 @@ class adminBlogController extends Controller
         $blog->save();
         
         //flash notification
+        flash("The Blog $blog->slug has been approved")->success();
+        //redirect
+        return redirect()->route('admin.blogs.index');
+    }
+    
+    public function markRejected($id){
+        $blog = Blog::withAnyStatus()->find($id);
+        $blog->markRejected();
+        $blog->save();
         
+        //flash notification
+        flash("the Blog $blog->slug has been rejected")->error();
         //redirect
         return redirect()->route('admin.blogs.index');
     }

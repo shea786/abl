@@ -65,8 +65,23 @@ Blog
                             </ul>
                         </div>
                     </div>
-                    <!-- /.row -->
                 </div>
+                    
+                    <!-- Latest Blog Well -->
+                <div class="well">
+                    <h4>Latest blogs</h4>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul class="list-unstyled">
+                                @foreach($latestblogs as $blog)
+                                    <li>
+                                        <a href="{{ route('blog.show',$blog->slug) }}">{{ $blog->title }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.row -->
             </div>
         </div>
         <!-- /.row -->
