@@ -19,6 +19,7 @@ return array(
     'App\\Http\\Controllers\\BlogController' => $baseDir . '/app/Http/Controllers/BlogController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'App\\Http\\Controllers\\PayPalController' => $baseDir . '/app/Http/Controllers/PayPalController.php',
     'App\\Http\\Controllers\\admin\\adminBlogController' => $baseDir . '/app/Http/Controllers/admin/adminBlogController.php',
     'App\\Http\\Controllers\\admin\\adminCategoryController' => $baseDir . '/app/Http/Controllers/admin/adminCategoryController.php',
     'App\\Http\\Controllers\\admin\\adminRolesController' => $baseDir . '/app/Http/Controllers/admin/adminRolesController.php',

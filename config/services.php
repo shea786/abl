@@ -34,5 +34,9 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-
+    
+    'paypal' => [
+	    'client_id' => 'AWuZE23jYYD-JeAKuuO9i-an5EHovoCyLh24ZkBI-Kuj6oHrscg1nEN5xQsslcEhuTRAF8B1hkbObgif',
+	    'secret' => 'EFOjDkLRZQ0OlcyR3CavSF2T0a1-xtpcBupH9dqg70F-hkeqOEu9-swj1vYicw7ia9pCX3_P_XIGkuFk'
+    ],
 ];

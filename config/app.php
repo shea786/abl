@@ -236,7 +236,6 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         
         //additional aliasses
-        
 
     ],
 

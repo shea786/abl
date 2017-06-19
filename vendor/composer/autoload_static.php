@@ -349,6 +349,7 @@ class ComposerStaticInitf55b1fa9d392131146466dfd58140d19
         'App\\Http\\Controllers\\BlogController' => __DIR__ . '/../..' . '/app/Http/Controllers/BlogController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\PayPalController' => __DIR__ . '/../..' . '/app/Http/Controllers/PayPalController.php',
         'App\\Http\\Controllers\\admin\\adminBlogController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/adminBlogController.php',
         'App\\Http\\Controllers\\admin\\adminCategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/adminCategoryController.php',
         'App\\Http\\Controllers\\admin\\adminRolesController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/adminRolesController.php',
