@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Contact;
 
-use Paypal;
-
-class PayPalController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,7 @@ class PayPalController extends Controller
      */
     public function index()
     {
-        $PayPal = Paypal::getAll(array('count' => 1, 'start_index' => 0), $this->_apiContext);
-        
-        
+        return view('contact.index');
     }
 
     /**
@@ -38,7 +35,23 @@ class PayPalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validation
+        
+        //Add contact information to database
+        $contact = new Contact;
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->subject = $request->subject;
+        $contact->description = $request->description;
+        
+        //send email to mail server with contact information
+        
+        
+        //flash notificaiton
+        //flash('The form was sent successfully')->success();
+        
+        //redirect
+        return redirect()->route('contact.index');
     }
 
     /**

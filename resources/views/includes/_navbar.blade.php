@@ -1,57 +1,51 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{ route('default') }}">{{ config('app.name') }}</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="{{ route('home.index') }}">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="{{ route('blog.index') }}">Blog</a></li>
-         <li><a href="#">Tutorials</a></li>
-      </ul>
-      
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      
-      <ul class="nav navbar-nav navbar-right">
-          @if(!Auth::check())
-         <li><a href="{{ route('login') }}">Login</a></li>
-         <li><a href="{{ route('register') }}">Register</a></li>
-          
-          @else
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Panel <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="{{ route('admin.blogs.index') }}">Blogs</a></li>
-            <li><a href="{{ route('admin.categories.index') }}">Categories</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="{{ route('admin.users.index') }}">Users</a></li>
-            <li><a href="{{ route('admin.roles.index') }}">Roles</a></li>
-            <li role="separator" class="divider"></li>
-            <li>
-                <a href="{{ route('logout') }}" id="lo_btn" >Logout</a>
-            </li>
-         </ul>
-        </li>
-        @endif()
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
+        <nav id="navbar" class="navbar">
+            <div id="navcontainer" class="container">
+                <button type="button" class="navbar-toggle visible-xs-block visible-sm-block" data-toggle="collapse" data-target="#navdrop">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <div class="collapse navbar-collapse drop" id="navdrop">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ route('default') }}">Home</a></li>
+                        <li><a href="{{ route('blog.index') }}">Blog</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Our Portfolio</a></li>
+                        <li><a href="{{ route('contact.index') }}">Contact Us</a></li>
+                    </ul>
+                    
+                    <!-- login register options -->
+                    <ul class="nav navbar-nav  navbar-right">
+                        @if(!Auth::check())
+                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('register') }}">Sign Up</a></li>
+                        @else
+                            <!-- dropdown menu-->
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account Management
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ route('admin.blogs.index') }}">Blogs</a></li>
+                                    <li><a href="{{ route('admin.categories.index') }}">Categories</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="{{ route('admin.users.index') }}">Users</a></li>
+                                    <li><a href="{{ route('admin.roles.index') }}">Roles</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <a href="{{ route('logout') }}" id="lo_btn">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--end dropdown -->
+                        @endif()
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
     {{ csrf_field() }}
 </form>

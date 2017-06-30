@@ -1,0 +1,40 @@
+/*primarary colour scheme */
+
+#navcontainer{
+  margin:0px auto;
+  padding:0px;
+}
+
+#navbar {
+  border-radius: 0px;
+  border-bottom:solid 1px #fff;
+  border-top:solid 1px #fff;
+  padding:0px;
+  
+  /*Addtional CSS*/ }
+  #navbar a:active, 
+  #navbar a:hover 
+  {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff; 
+  }
+
+  #navbar .dropdown .dropdown-menu{
+    background-color:#515151;
+    border-top:none;
+    border:solid 1px #fff;
+  }
+  
+  #navbar .dropdown .dropdown-menu a,
+  #navbar .dropdown .dropdown-menu a:active,
+  #navbar .dropdown .dropdown-menu a:focus,
+  #navbar .dropdown .dropdown-menu a:hover,
+  #navbar .dropdown a, 
+  #navbar .dropdown a:active,
+  #navbar .dropdown a:focus,
+  #navbar .dropdown a:hover
+  {
+    border:none;
+    background-color:inherit;
+  }
+  

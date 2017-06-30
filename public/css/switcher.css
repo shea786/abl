@@ -1,0 +1,18 @@
+/*==========  Mobile First Method  ==========*/
+
+/*global settings */
+
+@import url("/css/files/global.css");
+
+/*mobiles*/
+@import url("/css/files/mobile.css") only screen and (max-width : 480px);
+
+/*tablets*/
+@import url("/css/files/tablet.css") only screen and (max-width : 768px);
+
+
+/*destop medium and large*/
+@import url("/css/files/desktop.css") only screen and (min-width : 992px);
+
+
+

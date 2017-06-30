@@ -11,17 +11,18 @@
 |
 */
 Auth::routes();
-
-Route::get('/', function () {
-    return view('layouts.app');
-})->name('default');
-
+Route::get('/', 'HomeController@index')->name('default');
 Route::get('/home', 'HomeController@index')->name('home.index');
 
 Route::group(['prefix' => '/blog'],function(){
     Route::post('/{slug}','BlogController@addComment')->name('blog.add.comment');
     Route::get('/{slug}','BlogController@show')->name('blog.show');
     Route::get('/','BlogController@index')->name('blog.index');#
+});
+
+Route::group(['prefix' => '/contact'],function(){
+    Route::post('/','ContactController@store')->name('contact.store');
+    Route::get('/','ContactController@index')->name('contact.index');
 });
 
 Route::group(['prefix' => '/admin',

@@ -1,0 +1,19 @@
+/*primarary colour scheme */
+
+body{
+bvackground-color:#336699;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #fff; }
+
+#navbar {
+  /*Addtional CSS*/ }
+  #navbar a {
+    color: #fff; }
+  #navbar a:active, #navbar a:hover {
+    color: #fff;
+    font-weight: bolder;
+    background-color: #5e5e5e; }
+  #navbar a:active, #navbar li:active, #navbar a:focus {
+    background-color: #515151; }
