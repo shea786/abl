@@ -48,7 +48,7 @@ class ContactController extends Controller
         
         
         //flash notificaiton
-        //flash('The form was sent successfully')->success();
+        flash('The form was sent successfully')->success();
         
         //redirect
         return redirect()->route('contact.index');
