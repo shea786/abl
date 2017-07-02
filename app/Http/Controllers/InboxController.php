@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Inbox;
 
 class InboxController extends Controller
 {
@@ -35,7 +36,7 @@ class InboxController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

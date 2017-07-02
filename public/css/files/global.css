@@ -101,10 +101,10 @@ background-color:transparent;
 
 
 .panel>.panel-heading{
-  background-color:#403539;
-  color:#fff;
-  font-weight:bolder;
-  text-decoration:underline;
+    background-color:#403539;
+    color:#fff;
+    font-weight:bolder;
+    text-decoration:underline;
 }
 
 .panel>.panel-body{
@@ -123,9 +123,73 @@ background-color:transparent;
 
 /*Misc Global settings */
 .btn-success,.btn-success:hover{
-     background-color:#403539;
-     color:#fff;
+    background-color:#403539;
+    color:#fff;
     border:solid 1px #000;
     border-radius:4px;
 }
+
+#m-c>.row>#inbox-container{
+    background-color:#fff;
+    position:absolute;
+    width:100%;
+    border-bottom:solid 1px #000;
+    border-top:solid 1px #000;
+    min-height:500px;
+}
+
+#inbox-container>.col-md-3{
+    position:absolute;
+    background-color:red;
+    border-right:solid 1px #000;
+    min-height:100%;
+    left:0px;
+    padding:0px;
+    margin:0px;
+}
+#inbox-container>.col-md-9{
+    position:absolute;
+    border-right:solid 1px #000;
+    min-height:100%;
+    right:0px;
+    padding:0px;
+    margin:0px;
+}
+#inbox-container>.col-md-3>ul{
+    padding:0px;
+    min-height:60px;
+    border-bottom:solid 1px #000;
+}
+#inbox-container>.col-md-3>ul>li>a{
+    display:block;
+    color:#000;
+    text-decoration:none;
+}
+
+#inbox-container>.col-md-3>ul>li>a:hover{
+    background-color:#403539;
+    color:#fff;
+}
+
+
+
+#inbox-container>.col-md-3>ul>li>a>img{
+    width:70px;
+     position:relative;
+    top:10px;
+    padding:0px;
+    display:inline-block;
+    height:60px;
+}
+#inbox-container>.col-md-3>ul>li>a>span{
+    width:70%;
+    height:20px;
+    position:relative;
+    top:10px;
+    display:inline-block;
+    height:60px;
+    
+    text-align:center;
+}
+
 

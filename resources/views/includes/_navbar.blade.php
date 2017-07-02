@@ -32,6 +32,7 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
+                                <li><a href="{{ route('inbox.index') }}">Messages</a></li>
                                 <li><a href="{{ route('admin.blogs.index') }}">Blogs</a></li>
                                 <li><a href="{{ route('admin.categories.index') }}">Categories</a></li>
                                 <li role="separator" class="divider"></li>
