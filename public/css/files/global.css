@@ -66,3 +66,9 @@ cursor:arrow;
   font-weight:bolder;
   text-decoration:underline;
 }
+
+.panel>.panel-body{
+    border-radius:5px;
+    color:#000;
+    font-weight:bolder;
+}

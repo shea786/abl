@@ -9,7 +9,7 @@ Contact Us
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Contact information</div>
+                <div class="panel-heading">Contact</div>
                     
                 <div class="panel-body">
                     If you have any queries please fill out the contact form or call us on the number below
@@ -21,7 +21,7 @@ Contact Us
     <div class="row">
         <div class="col-md-6">
             <div class="panel panel-default">
-                <div class="panel-heading">Contact Us</div>
+                <div class="panel-heading">Contact Form</div>
 
                 <div class="panel-body">
                     {!! Form::open([route('contact.store'),'method' => 'POST']) !!}
