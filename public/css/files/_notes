@@ -1,0 +1,9 @@
+
+#m-c
+M-c stands for main container use this to place a footer at the bottom, 
+this will not allow the footer to push itself up when the page content size is dfifferent
+
+height has been set to minimum of 80% this can be change to anything lower but max of 100%
+
+this m-c id is also placed on a .container-fluid class and allows the developers to add more 
+.container and .container-classes in the structure

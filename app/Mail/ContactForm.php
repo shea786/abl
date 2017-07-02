@@ -16,9 +16,9 @@ class ContactForm extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($contactform)
     {
-        //
+        $this->contactform = $contactform;
     }
 
     /**
@@ -29,6 +29,9 @@ class ContactForm extends Mailable
     public function build()
     {
         return $this->subject($this->subject)
-            ->view('');
+            ->view('contact.mail')
+            ->from('noreply@cititech.tech')
+            ->subject($this->contactform->subject)
+            ->with('contactform',$this->contactform);;
     }
 }

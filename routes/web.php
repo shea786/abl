@@ -10,7 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Auth::routes();
+
+//public routes
+
 Route::get('/', 'HomeController@index')->name('default');
 Route::get('/home', 'HomeController@index')->name('home.index');
 
@@ -20,10 +24,18 @@ Route::group(['prefix' => '/blog'],function(){
     Route::get('/','BlogController@index')->name('blog.index');#
 });
 
+  Route::group(['prefix'=>'/inbox'],function(){
+        Route::get('/','InboxController@index')->name('inbox.index');
+    });
+
 Route::group(['prefix' => '/contact'],function(){
     Route::post('/','ContactController@store')->name('contact.store');
     Route::get('/','ContactController@index')->name('contact.index');
 });
+
+
+
+//Administrator Routes 
 
 Route::group(['prefix' => '/admin',
     'middleware' => ['auth','acl'],
@@ -62,4 +74,7 @@ Route::group(['prefix' => '/admin',
         Route::get('/create','admin\adminCategoryController@create')->name('admin.categories.create');
         Route::get('/','admin\adminCategoryController@index')->name('admin.categories.index');
     });
+    
+  
+    
 });

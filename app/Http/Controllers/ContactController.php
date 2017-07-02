@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Contact;
+use Mail;
+
+//use emails
+use App\Mail\ContactForm;
 
 class ContactController extends Controller
 {
@@ -42,10 +46,13 @@ class ContactController extends Controller
         $contact->name = $request->name;
         $contact->email = $request->email;
         $contact->subject = $request->subject;
-        $contact->description = $request->description;
+        $contact->description = $request->content;
+        $contact->save();
         
         //send email to mail server with contact information
-        
+        $contactform = $contact;
+        $receiverAddress = 'admin@cititech.tech';
+        Mail::to($receiverAddress)->send(new ContactForm($contactform));
         
         //flash notificaiton
         flash('The form was sent successfully')->success();
