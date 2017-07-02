@@ -58,12 +58,11 @@ cursor:arrow;
 .panel{
     background-color:#fff;
     border:none;
-    color:#fff;
     border-radius:3px;
 }
 .panel>.panel-heading{
   background-color:#403539;
-  coloor:#fff;
+  color:#fff;
   font-weight:bolder;
   text-decoration:underline;
 }
