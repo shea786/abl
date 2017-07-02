@@ -15,6 +15,11 @@ class CreateInboxesTable extends Migration
     {
         Schema::create('inboxes', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('msg_to');// friends id
+            $table->integer('msg_from'); // your id
+            $table->text("message");
+            $table->integer('status'); // 0 = sent 1 = read
+            $table->dateTime('read_at');
             $table->timestamps();
         });
     }
