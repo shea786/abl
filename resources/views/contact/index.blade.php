@@ -50,9 +50,9 @@ Contact Us
                 
                 <div class="panel-body">
                     <div>
-                        <strong>Call Us</strong> | <a href="tel:02477675488">02477675488</a>
+                        Call Us: <a href="tel:">N/A</a>
                         <br>
-                        <strong>Email Us</strong> | <a href="mailto:admin@cititech.tech">admin@cititech.tech</a>
+                        Email Us: <a href="mailto:admin@cititech.tech">admin@cititech.tech</a>
                         <br>
                     </div>
                     

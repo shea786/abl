@@ -72,3 +72,15 @@ cursor:arrow;
     background-color:#f1f1f1;
     font-weight:bolder;
 }
+
+.panel>.panel-body>div>a{
+    color:#000;
+}
+
+.btn-success,.btn-success:hover{
+     background-color:#403539;
+     color:#fff;
+    border:solid 1px #000;
+    border-radius:4px;
+}
+
