@@ -69,6 +69,7 @@ cursor:arrow;
 
 .panel>.panel-body{
     border-radius:5px;
+    border:solid 1px #000;
     color:#000;
-    font-weight:bolder;
+    font-weight:bolde;
 }
