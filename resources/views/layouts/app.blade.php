@@ -25,5 +25,39 @@
         <div class="container-fluid" id="m-c">
             @yield('content')
         </div>
+         <div class="container-fluid" id="footer">
+             <div class="row">
+                 <div class='col-md-4'>
+                     <ul class="nav">
+                         <li><a href="#">Home</a></li>
+                          <li><a href="#">Home</a></li>
+                           <li><a href="#">Home</a></li>
+                     </ul>
+                 </div>
+                 
+                 <div class='col-md-4'>
+                    <ul class="nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                    </ul>
+                 </div>
+                 
+                <div class='col-md-2'>
+                    <ul class="nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                    </ul>
+                 </div>
+                   <div class='col-md-2'>
+                    <ul class="nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                    </ul>
+                 </div>
+                 </div>
+         </div>
     </body>
 </html>

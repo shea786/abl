@@ -1,9 +1,12 @@
+Here you will find documentation notes for this perticular website setup this will include what classes and id's 
+have been used as well as what is required for customisation
 
-#m-c
-M-c stands for main container use this to place a footer at the bottom, 
-this will not allow the footer to push itself up when the page content size is dfifferent
+#t-n < this is the topbar navigation 
+#m-c < this is the main controller 
+#footer is a unique id for the footer.
 
-height has been set to minimum of 80% this can be change to anything lower but max of 100%
+//notes for m-c
 
-this m-c id is also placed on a .container-fluid class and allows the developers to add more 
-.container and .container-classes in the structure
+the main container id is set as a default under global.css this is used as a master container 
+o hold content and also allow the footer to be in the same postition all the time unless the master container expans
+the m-c id is set to a minimum height of 90% and will expand when more content is added.

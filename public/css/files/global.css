@@ -1,17 +1,27 @@
+/*Global settings for html and body*/
+
 body,html{
     background-color:#403539;
     height:100%;
+    color:#fff;
 }
 
+/*End global Settings for body and html*/
 
 
-/*see m-c notes in _notes file*/
+
+/*Main container global settings
+# please refer to /css/_notes/for more information
+*/
+
 #m-c{
     min-height:90%;
     margin:5px 0px;
     padding:0px;
     border-bottom:2px #fff solid;
 }
+
+/*End main container global settings */
 
 /*topbar Navigation*/
 #t-n{
@@ -54,11 +64,39 @@ cursor:arrow;
     background-color:#403539;
     color:#fff;
 }
+/*end top navigation bar*/
 
-.panel{
-    border-radius:5px;
-    border:solid 1px #fff;
+
+/*footer*/
+#footer{
+    min-height:100px;
+    border-bottom:solid 1px #fff;
+    text-align:center;
 }
+
+/*Footer href settings per coloum*/
+#footer>.row>.col-md-1>ul>li>a,
+#footer>.row>.col-md-2>ul>li>a,
+#footer>.row>.col-md-3>ul>li>a,
+#footer>.row>.col-md-4>ul>li>a,
+#footer>.row>.col-md-5>ul>li>a,
+#footer>.row>.col-md-6>ul>li>a,
+#footer>.row>.col-md-7>ul>li>a,
+#footer>.row>.col-md-8>ul>li>a,
+#footer>.row>.col-md-9>ul>li>a,
+#footer>.row>.col-md-10>ul>li>a,
+#footer>.row>.col-md-11>ul>li>a,
+#footer>.row>.col-md-12>ul>li>a
+{
+color:#fff;
+background-color:transparent;
+}
+
+/*end footer section*/
+
+
+/* .panel global settings */
+
 
 .panel>.panel-heading{
   background-color:#403539;
@@ -77,6 +115,11 @@ cursor:arrow;
     color:#000;
 }
 
+
+/*end .panel globals*/
+
+
+/*Misc Global settings */
 .btn-success,.btn-success:hover{
      background-color:#403539;
      color:#fff;

@@ -7,6 +7,10 @@
   border-radius:0px;
 }
 
+.panel{
+    border-radius:5px;
+    border:solid 1px #fff;
+}
 
 .panel-body>#contactMaps>iframe{
   height:400px;
