@@ -7,6 +7,7 @@
             
               <div class="navbar-header">
                     <a class="navbar-brand" href="{{ route('default') }}">{{ config('app.name') }}</a>
+                 
                 </div>
                 
             <div class="collapse navbar-collapse drop" id="navdrop">
@@ -28,24 +29,38 @@
                     @else
                         <!-- dropdown menu-->
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account Management
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{Auth::user()->first_name }} {{ Auth::user()->last_name}}
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ route('inbox.index') }}">Messages</a></li>
+                                <li><a href="{{ route('inbox.index') }}">My Messages</a></li>
+                                <li><a href="{{ route('admin.blogs.index') }}">Profile Settings</a></li>
+                             
+                            
+                            </ul>
+                        </li>
+                        <!--end dropdown -->
+                   
+                        @if ( Auth::user()->isAdministrator())
+                      <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin Panel
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
                                 <li><a href="{{ route('admin.blogs.index') }}">Blogs</a></li>
                                 <li><a href="{{ route('admin.categories.index') }}">Categories</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="{{ route('admin.users.index') }}">Users</a></li>
                                 <li><a href="{{ route('admin.roles.index') }}">Roles</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li>
-                                    <a href="{{ route('logout') }}" id="lo_btn">Logout</a>
-                                </li>
+                           
                             </ul>
                         </li>
-                        <!--end dropdown -->
-                    @endif()
+                        @endif
+                         <li>
+                                    <a href="{{ route('logout') }}" id="lo_btn">Logout</a>
+                                </li>
+                     @endif()
                 </ul>
             </div>
         </nav>

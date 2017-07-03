@@ -12,4 +12,9 @@ return false
 
 })
 
+
+$("a").click(){
+  return false
+}
+
 })

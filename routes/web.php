@@ -26,6 +26,9 @@ Route::group(['prefix' => '/blog'],function(){
 
   Route::group(['prefix'=>'/inbox'],function(){
         Route::get('/','InboxController@index')->name('inbox.index');
+        Route::get('/new',function(){
+           echo "helllo" ;
+        })->name('inbox.new');
     });
 
 Route::group(['prefix' => '/contact'],function(){

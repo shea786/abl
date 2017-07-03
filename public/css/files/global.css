@@ -15,8 +15,8 @@ body,html{
 */
 
 #m-c{
-    min-height:90%;
-    margin:5px 0px;
+    min-height:100%;
+    margin:0px;
     padding:0px;
     border-bottom:2px #fff solid;
 }
@@ -28,6 +28,7 @@ body,html{
     background-color:#fff;
     padding:0px;
     margin:0px;
+    margin-bottom:5px;
     min-height:20px;
 }
 
@@ -36,9 +37,9 @@ body,html{
     background-color:transparent;
 }
 
-#t-n>.navbar-header>a{
+.navbar-header>a{
 color:#000;
-border-right:solid 1px #000;
+margin:0px;
 cursor:arrow;
 }
 
@@ -50,7 +51,11 @@ cursor:arrow;
 #t-n>div>ul>.dropdown>.dropdown-menu{
   background-color:#fff;
   width:100%;
+  margin:0px;
   border:none;
+}
+#t-n>button>span{
+    background-color:#000;
 }
 
 #t-n>div>ul>.dropdown>.dropdown-menu>li>a{
@@ -72,14 +77,14 @@ cursor:arrow;
 
 #footer{
     min-height:100px;
-    border-bottom:solid 1px #fff;
+    border-top:solid 1px #fff;
     text-align:center;
 }
 
 /*Footer href settings per coloum*/
 #footer>.row>.col-md-1>ul>li>a,
 #footer>.row>.col-md-2>ul>li>a,
-#footer>.row>.col-md-3>ul>li>a,
+#footer>.row>.iboxside>ul>li>a,
 #footer>.row>.col-md-4>ul>li>a,
 #footer>.row>.col-md-5>ul>li>a,
 #footer>.row>.col-md-6>ul>li>a,
@@ -127,69 +132,6 @@ background-color:transparent;
     color:#fff;
     border:solid 1px #000;
     border-radius:4px;
-}
-
-#m-c>.row>#inbox-container{
-    background-color:#fff;
-    position:absolute;
-    width:100%;
-    border-bottom:solid 1px #000;
-    border-top:solid 1px #000;
-    min-height:500px;
-}
-
-#inbox-container>.col-md-3{
-    position:absolute;
-    background-color:red;
-    border-right:solid 1px #000;
-    min-height:100%;
-    left:0px;
-    padding:0px;
-    margin:0px;
-}
-#inbox-container>.col-md-9{
-    position:absolute;
-    border-right:solid 1px #000;
-    min-height:100%;
-    right:0px;
-    padding:0px;
-    margin:0px;
-}
-#inbox-container>.col-md-3>ul{
-    padding:0px;
-    min-height:60px;
-    border-bottom:solid 1px #000;
-}
-#inbox-container>.col-md-3>ul>li>a{
-    display:block;
-    color:#000;
-    text-decoration:none;
-}
-
-#inbox-container>.col-md-3>ul>li>a:hover{
-    background-color:#403539;
-    color:#fff;
-}
-
-
-
-#inbox-container>.col-md-3>ul>li>a>img{
-    width:70px;
-     position:relative;
-    top:10px;
-    padding:0px;
-    display:inline-block;
-    height:60px;
-}
-#inbox-container>.col-md-3>ul>li>a>span{
-    width:70%;
-    height:20px;
-    position:relative;
-    top:10px;
-    display:inline-block;
-    height:60px;
-    
-    text-align:center;
 }
 
 

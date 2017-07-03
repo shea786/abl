@@ -17,3 +17,140 @@
   width:100%;
   border:none;
 }
+
+/*desktop inbox settings*/
+
+
+#inbox-container{
+
+    background-color:#fff;
+    height:90vh;
+    padding:0px;
+    margin: 0px 0px;
+      margin-top:1px;
+    
+}
+
+#inbox-container>.iboxside{
+    overflow-y:auto;
+    min-height:90vh;
+      max-height:90vh;
+      overflow-y: auto;
+    margin:0px;
+    padding:0px;
+    border-right:solid 1px #000;
+}
+
+
+#inbox-container>.iboxside>ul>li{
+  color:#000;
+  min-height:auto;
+  border-bottom:solid 1px #000;
+}
+#inbox-container>.iboxside>ul>li:last-child{
+  border:none;
+}
+
+
+#inbox-container>.iboxside>ul>li>a{
+  color:#000;
+  min-height:70px;
+  line-height:90px;
+  padding-top:0px;
+}
+
+#inbox-container>.iboxside>ul>li>a:hover{
+      background-color:#403539;
+    color:#fff;
+}
+
+#inbox-container>.iboxside>ul>li>a>img{
+position:relative;
+left: 0px;
+width:20%;
+height: 50px;
+margin:10px 10%;
+}
+#inbox-container>.iboxside>ul>li>a>.uname{
+      min-height:60px;
+      position: relative;
+      right:0px;
+      padding:0px;
+      width:70%;
+      margin:0px;
+}
+
+
+
+
+#inbox-container>#msgtexts{
+    margin:0px;
+    position:relative;
+    padding:0px;
+    height:90vh;
+}
+
+#inbox-container>#msgtexts>#msgarea{
+    height:70vh;
+    border-bottom:solid 1px #000;
+}
+
+#inbox-container>#msgtexts>#msgform{
+    position:relative;
+  height:20vh;
+    padding:0px;
+    margin:0px;
+    background-color:f1f1f1;
+    color:#000;
+}
+
+#inbox-container>#msgtexts>#msgform>form>textarea{
+    width:70%;
+      height:90%;
+    padding:0px;
+    background-color: white;
+    position: absolute;
+    left:5%;
+    border-radius:3px;
+    border:solid 1px #000;
+    top:5%;
+     background-color:#403539;
+     color:#fff;
+     font-weight: bolder;
+     text-indent: 5px;
+    resize: none;
+
+}
+
+
+#inbox-container>#msgtexts>#msgform>form>#ibsub{
+    width:20%;
+    height:50%;
+    padding:0px;
+    margin:0px;
+    position: absolute;
+    right:2%;
+    top:25%;
+}
+
+#mytabs{
+border:none;
+}
+
+#mytabs>li>a{
+  color:#000;
+  height: 50px;
+  line-height: 50px;
+  padding:0px 20px;
+  margin:0px 5px;
+  background-color:#fff;
+  border:none;
+  border-radius:3px 3px 0px 0px;
+}
+
+#mytabs>li>a:hover{
+    background-color:#403539;
+    color:#fff;
+    border:solid 1px #fff;
+    border-bottom:none;
+}

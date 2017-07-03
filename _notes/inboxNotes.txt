@@ -1,0 +1,11 @@
+Display the people who the logged in user has messaged
+
+When we click on a person, the right hand side menu should change to that persons conversation
+
+when the logged in user clicks on submit message, the form should go to the inboxController@index function and store the data into the database
+The page should then be refreshed showing the new message
+
+when the user clicks on new message a search bar should appear which allows the logged in user to search for other users either by username, email or full name
+when the user clicks on the name of the searched user, the message window shold appear with the searched user. when the logged in user messages then it gets stored in database with the searched user as message_to variable
+
+when a new message has been submitted into the database, the messaged user should recieve a notification
