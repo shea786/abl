@@ -25,10 +25,11 @@ Route::group(['prefix' => '/blog'],function(){
 });
 
   Route::group(['prefix'=>'/inbox'],function(){
-        Route::get('/','InboxController@index')->name('inbox.index');
+        Route::get('/{friend_id}','InboxController@index')->name('inbox.index');
         Route::get('/new',function(){
            echo "helllo" ;
         })->name('inbox.new');
+        Route::post("/{friend_id}","MessageController@store")->name("message.store");
     });
 
 Route::group(['prefix' => '/contact'],function(){

@@ -16,6 +16,7 @@
         <!-- Latest compiled JavaScript -->
         <script src="/js/bootstrap.js"></script>
         <script src="/js/main.js"></script>
+        <script src="/js/inbox.js"></script>
     </head>
     
     

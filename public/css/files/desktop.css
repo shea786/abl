@@ -91,13 +91,33 @@ margin:10px 10%;
 }
 
 #inbox-container>#msgtexts>#msgarea{
-    height:70vh;
+    min-height:70vh;
+    max-height:70vh;
     border-bottom:solid 1px #000;
+    overflow-y:auto;
+}
+#inbox-container>#msgtexts>#msgarea>div{
+    color:#000;
+    line-height:50px;
+    height:50px;
+    border-bottom:solid 1px #000;
+}
+
+#inbox-container>#msgtexts>#msgarea>.to{
+   background-color:blue;
+   color:#000;
+}
+
+#inbox-container>#msgtexts>#msgarea>.from{
+    color:#fff;
+    background-color:green;
 }
 
 #inbox-container>#msgtexts>#msgform{
     position:relative;
   height:20vh;
+  max-height:20%;
+  
     padding:0px;
     margin:0px;
     background-color:f1f1f1;
