@@ -104,9 +104,10 @@ margin:10px 10%;
 }
 
 #inbox-container>#msgtexts>#msgarea>.to{
-   background-color:blue;
+   background-color:red;
    color:#000;
-}
+   width:80%;
+   min-height: 20px;}
 
 #inbox-container>#msgtexts>#msgarea>.from{
     color:#fff;

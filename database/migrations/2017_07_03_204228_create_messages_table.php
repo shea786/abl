@@ -15,8 +15,8 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('msg_to');// friends id
-            $table->integer('msg_from'); // your id
+            $table->integer('inbox_id');
+            $table->integer('user_id');
             $table->text("message");
             $table->integer('status'); // 0 = sent 1 = read
             $table->dateTime('read_at')->nullable();

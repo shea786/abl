@@ -12,11 +12,33 @@
 */
 
 Auth::routes();
-
 //public routes
 
 Route::get('/', 'HomeController@index')->name('default');
 Route::get('/home', 'HomeController@index')->name('home.index');
+
+
+Route::group(['prefix' => '/inbox',
+    'middleware' => ['auth','acl'],
+    'is' => 'administrator'
+],function(){
+    Route::get('/', 'TestMessagesController@index')->name('inbox.index');
+    Route::get('/getinbox', 'TestMessagesController@getInboxes')->name('test.messages.getInboxes');
+    Route::get('/messages/{friend_id}', 'TestMessagesController@getMessages')->name('test.messages.get');
+    Route::post('/messages/{friend_id}', 'TestMessagesController@postMessages')->name('test.messages.post');
+});
+
+Route::group(['prefix' => '/about-us'],function(){
+    Route::get('/', 'AboutUsController@index')->name('aboutus.index');
+});
+
+Route::group(['prefix' => '/services'],function(){
+    Route::get('/', 'ServicesController@index')->name('services.index');
+});
+
+Route::group(['prefix' => '/forum'],function(){
+    Route::get('/', 'ForumController@index')->name('forum.index');
+});
 
 Route::group(['prefix' => '/blog'],function(){
     Route::post('/{slug}','BlogController@addComment')->name('blog.add.comment');
@@ -24,13 +46,6 @@ Route::group(['prefix' => '/blog'],function(){
     Route::get('/','BlogController@index')->name('blog.index');#
 });
 
-  Route::group(['prefix'=>'/inbox'],function(){
-        Route::get('/{friend_id}','InboxController@index')->name('inbox.index');
-        Route::get('/new',function(){
-           echo "helllo" ;
-        })->name('inbox.new');
-        Route::post("/{friend_id}","MessageController@store")->name("message.store");
-    });
 
 Route::group(['prefix' => '/contact'],function(){
     Route::post('/','ContactController@store')->name('contact.store');

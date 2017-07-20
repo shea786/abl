@@ -14,10 +14,9 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ route('default') }}">Home</a></li>
                     <li><a href="{{ route('blog.index') }}">Blog</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Our Portfolio</a></li>
+                    <li><a href="{{ route('aboutus.index') }}">About us</a></li>
+                    <li><a href="{{ route('services.index') }}">Services</a></li>
+                    <li><a href="{{ route('forum.index') }}">Forum</a></li>
                     <li><a href="{{ route('contact.index') }}">Contact Us</a></li>
                 </ul>
                 
@@ -57,9 +56,9 @@
                             </ul>
                         </li>
                         @endif
-                         <li>
-                                    <a href="{{ route('logout') }}" id="lo_btn">Logout</a>
-                                </li>
+                        <li>
+                            <a href="{{ route('logout') }}" id="lo_btn">Logout</a>
+                        </li>
                      @endif()
                 </ul>
             </div>

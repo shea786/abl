@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Message;
-use App\Inbox;
-use Auth;
 
-class MessageController extends Controller
+class AboutUsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +13,7 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $messages = Message::all();
-        return json_encode($messages);
+        return view('aboutus.index');
     }
 
     /**
@@ -36,37 +32,9 @@ class MessageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,$id)
+    public function store(Request $request)
     {
-        //validation
-        $this->validate($request, [
-            'msginput' => 'required',
-        ]);
-       
-        
-        $inbox = Inbox::where('friend_id','=',$id)->first();
-        if(count($inbox) != 1){
-            $inbox = new Inbox;
-            $inbox->user_id = Auth::user()->id;
-            $inbox->friend_id = $id;
-            $inbox->save();
-            
-            $friend_inbox = new Inbox;
-            $friend_inbox->user_id = $id;
-            $friend_inbox->friend_id = Auth::user()->id;
-            $friend_inbox->save();
-        }
-        $message = new Message;
-        $message->inbox_id = 1;
-        $message->msg_from = Auth::user()->id;
-        $message->msg_to = $id;
-        $message->message = $request->msginput;
-        $message->status = 0;
-        $message->save();
-        
-        
-        //redirect
-        return redirect()->route('inbox.index',$id);
+        //
     }
 
     /**

@@ -5,7 +5,6 @@ Inbox
 @endsection
 
 @section("content")
-
     <div class="contrainer-fluid">
             <nav class='rows'>
             
@@ -53,5 +52,5 @@ Inbox
             </div>
         </div>
     </div>
-    
+
 @endsection

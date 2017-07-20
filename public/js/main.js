@@ -10,7 +10,7 @@ $("#lo_btn").click(function(){
 return false
 
 })
-
-
+//load inbox.js
+$.getScript("/js/inbox.js");
 
 })
