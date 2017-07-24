@@ -23,8 +23,8 @@ Route::group(['prefix' => '/inbox',
     'is' => 'administrator'
 ],function(){
     Route::get('/', 'MessageController@index')->name('inbox.index');
-    Route::get('/{inbox_id}', 'MessageController@getMessages')->name('inbox.messages,get');
-    //Route::post('/messages/{friend_id}', 'MessageController@postMessages')->name('test.messages.post');
+    Route::get('/{inbox_id}', 'MessageController@getMessages')->name('inbox.messages.get');
+    Route::post('/{inbox_id}', 'MessageController@postMessages')->name('inbox.messages.post');
 });
 
 Route::group(['prefix' => '/about-us'],function(){

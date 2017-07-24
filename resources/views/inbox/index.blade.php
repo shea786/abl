@@ -18,7 +18,7 @@ Inbox
                                 $user = $inbox->callUserTwo;
                             }
                         @endphp
-                        <a class="profile_link" href="{{ route('inbox.messages,get',$inbox->id) }}"><img src="/images/newyork.jpg">
+                        <a class="profile_link" href="{{ route('inbox.messages.get',$inbox->id) }}"><img src="/images/newyork.jpg">
                            <span class="uname">{{ $user->first_name }} {{ $user->last_name }} </span>
                         </a>
                     </li>

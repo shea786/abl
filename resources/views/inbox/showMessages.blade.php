@@ -1,7 +1,7 @@
-@extends('test.messages.index')
+@extends('inbox.index')
 
 @section('HTMLTitle')
-Test Inbox
+Show Messages | Inbox
 @endsection
 
 @section('msgarea')
@@ -22,8 +22,7 @@ Test Inbox
             $friend_id = $inboxx->user_one;
         }
     @endphp
-    {!! Form::open([route('test.messages.post',$friend_id)]) !!}
-        {!! Form::text('iid',$inboxx->id,[]) !!}
+    {!! Form::open([route('inbox.messages.post',$inboxx->id)]) !!}
         {!! Form::textarea('msginput',null,['id' => 'msginput','cols' => '50','rows' => '10']) !!}
         {!! Form::submit('Send Message',['id' => 'ibsub','class' => 'btn btn-success']) !!}
     {!! Form::close() !!}
