@@ -32,7 +32,7 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ route('inbox.index',1) }}">My Messages</a></li>
+                                <li><a href="{{ route('inbox.index') }}">My Messages</a></li>
                                 <li><a href="{{ route('admin.blogs.index') }}">Profile Settings</a></li>
                              
                             
