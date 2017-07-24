@@ -22,9 +22,11 @@ Route::group(['prefix' => '/inbox',
     'middleware' => ['auth','acl'],
     'is' => 'administrator'
 ],function(){
-    Route::get('/', 'MessageController@index')->name('inbox.index');
+    Route::get('/new', 'MessageController@create')->name('inbox.new');
+    Route::post('/new', 'MessageController@store')->name('inbox.store');
     Route::get('/{inbox_id}', 'MessageController@getMessages')->name('inbox.messages.get');
     Route::post('/{inbox_id}', 'MessageController@postMessages')->name('inbox.messages.post');
+    Route::get('/', 'MessageController@index')->name('inbox.index');
 });
 
 Route::group(['prefix' => '/about-us'],function(){

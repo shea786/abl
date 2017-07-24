@@ -7,6 +7,7 @@ Inbox
 @section('content')
     <div class="row visible-md visible-lg" id="inbox-container">
         <div class='col-md-4 iboxside'>
+            <a href="{{ route('inbox.new') }}" class="btn btn-success form-control">Message Someone New?</a>
             <ul class="nav">
                 @if(count($inboxes) >= 1)
                     @foreach($inboxes as $inbox)
