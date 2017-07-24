@@ -22,10 +22,9 @@ Route::group(['prefix' => '/inbox',
     'middleware' => ['auth','acl'],
     'is' => 'administrator'
 ],function(){
-    Route::get('/', 'TestMessagesController@index')->name('inbox.index');
-    Route::get('/getinbox', 'TestMessagesController@getInboxes')->name('test.messages.getInboxes');
-    Route::get('/messages/{friend_id}', 'TestMessagesController@getMessages')->name('test.messages.get');
-    Route::post('/messages/{friend_id}', 'TestMessagesController@postMessages')->name('test.messages.post');
+    Route::get('/', 'MessageController@index')->name('inbox.index');
+    Route::get('/{inbox_id}', 'MessageController@getMessages')->name('inbox.messages,get');
+    //Route::post('/messages/{friend_id}', 'MessageController@postMessages')->name('test.messages.post');
 });
 
 Route::group(['prefix' => '/about-us'],function(){
