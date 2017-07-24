@@ -1,7 +1,14 @@
 @extends('inbox.index')
 
 @section('HTMLTitle')
-Show Messages | Inbox
+    @php
+        if($inboxx->user_one == Auth::user()->id){
+            $friend_id = $inboxx->callUserTwo;
+        }else{
+            $friend_id = $inboxx->callUserOne;
+        }
+    @endphp
+{{ $friend_id->first_name }} {{ $friend_id->first_name }} | Inbox
 @endsection
 
 @section('msgarea')
